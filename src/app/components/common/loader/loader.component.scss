@@ -1,0 +1,10 @@
+.container-fluid {
+  height: 100vh !important;
+  background: rgba(121, 136, 188, 0.151) !important;
+  backdrop-filter: blur(3px);
+  cursor: progress;
+  .spinner-border{
+    height: 70px;
+    width: 70px;
+  }
+}

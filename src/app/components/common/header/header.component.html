@@ -1,0 +1,17 @@
+<div class="container-fluid d-flex justify-content-between align-items-center mt-3">
+    <h4 class="d-md-block d-none">{{Title}}</h4>
+    <h1 routerLink="/dashboard" role="button" class="d-md-none d-lg-none d-sm-block fs-3" title="To-Do App">To-Do App
+    </h1>
+    <div class="d-flex align-items-center gap-4 gap-sm-3">
+        <button
+            class="d-flex align-items-center border-0 btn shadow-sm px-3 my-3 btn-group gap-sm-1 d-sm-flex d-md-none"
+            type="button" title="Add task" (click)="modelOpen()">
+            <span class="fs-6">Add&nbsp;Task&nbsp;</span> <img src="assets/fa/circle-plus.svg" alt="add" />
+        </button>
+        <button class="border-0 shadow-sm signout btn px-3 d-flex gap-sm-1  align-items-center" title="Sing out"
+            (click)="signOut()">
+            <span class="fs-6">Sign&nbsp;out&nbsp;</span>
+            <img src="assets/fa/sign-out.svg" alt="signout">
+        </button>
+    </div>
+</div>

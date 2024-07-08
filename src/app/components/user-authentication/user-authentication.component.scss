@@ -1,0 +1,95 @@
+$boxShadow: 4px 4px 16px 0px #0000001a;
+$inputBg: #fff;
+$errorColor: rgba(182, 13, 13, 0.838);
+
+// sign in
+$signInBg: #fff;
+$signInHeaderColor: #ba5112;
+$signInSubHeaderColor: #251814;
+$signInBtnColor: #edb046;
+$signInNavColor: #251814;
+$signInNavLink: #ba5112;
+
+// sign up
+$signUpBg: #edb046;
+$signUpHeaderColor: #ffffff;
+$signUpSubHeaderColor: #ffffff;
+$signUpBtnColor: #ba5112;
+$signUpNavColor: #ffffff;
+$signUpNavLink: #ba5112;
+
+@keyframes Loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+.container-fluid {
+  height: 100vh;
+  background-image: url("../../../assects/bg-image/login-bg.svg");
+  background-position: center;
+  background-size: contain;
+
+  .login {
+    background: $signUpBg;
+    h2 {
+      color: $signUpHeaderColor;
+    }
+    p {
+      color: $signUpSubHeaderColor;
+      font-size: 0.8rem;
+    }
+    button {
+      background: $signUpBtnColor;
+      font-size: 0.8rem;
+      color: #fff;
+    }
+  }
+  span {
+    top: 6px;
+    right: 25px;
+    img {
+      height: 10px;
+    }
+  }
+  a {
+    color: $signInNavLink;
+  }
+
+  .form-control {
+    &::placeholder {
+      color: #b5b5b5;
+    }
+  }
+  .errors {
+    p {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  .register {
+    background: $signInBg;
+    h2 {
+      color: $signInHeaderColor;
+    }
+    p {
+      color: $signInSubHeaderColor;
+      font-size: 0.7rem;
+    }
+    button {
+      background: $signInBtnColor;
+      font-size: 0.8rem;
+    }
+  }
+  .password-img {
+    height: 12px;
+  }
+}

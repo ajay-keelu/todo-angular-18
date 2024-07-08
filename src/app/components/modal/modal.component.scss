@@ -1,0 +1,39 @@
+* {
+  font-family: "Lexend", sans-serif;
+}
+.container-fluid {
+  background: rgba(4, 4, 4, 0.444);
+  backdrop-filter: blur(3px);
+
+  .task-container {
+    form {
+      .title {
+        input {
+          font-family: "Lexend", sans-serif;
+          &::placeholder {
+            color: #b5b5b5;
+            font-family: sans-serif;
+          }
+        }
+      }
+      .description {
+        textarea {
+          resize: none;
+          &::placeholder {
+            color: #b5b5b5;
+          }
+        }
+      }
+    }
+  }
+}
+.cancel {
+  button {
+    background: #fff;
+  }
+}
+.save {
+  button {
+    background: #edb046;
+  }
+}

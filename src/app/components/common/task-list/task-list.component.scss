@@ -1,0 +1,73 @@
+* {
+  font-family: "Lexend", sans-serif;
+}
+.active-component {
+  background: #fff;
+  .time {
+    font-size: 9px;
+    color: rgb(167, 164, 164);
+  }
+}
+
+.card {
+  width: 300px;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+
+  .manipulate {
+    img {
+      height: 15px !important;
+    }
+  }
+}
+
+.toggle {
+  transform: scale(1) !important;
+}
+
+.completed-component {
+  background: #edb046;
+  .card {
+    background: #edb046 !important;
+  }
+  .time {
+    font-size: 9px;
+    color: #ba5112;
+  }
+}
+@media screen and (max-width: 460px) {
+  .checkbox {
+    height: 12px !important;
+  }
+
+  p {
+    font-size: 10px !important;
+  }
+
+  .card {
+    width: 200px !important;
+
+    .card-title {
+      font-size: 12px !important;
+    }
+
+    .time {
+      font-size: 7px !important;
+    }
+
+    .cross {
+      padding: 0px 5px !important ;
+      font-size: 12px !important;
+    }
+
+    .description {
+      font-size: 10px !important;
+    }
+
+    .manipulate {
+      img {
+        height: 10px !important;
+      }
+    }
+  }
+}

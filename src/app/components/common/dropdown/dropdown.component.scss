@@ -1,0 +1,16 @@
+$background: #edb046;
+
+.container-fluid {
+  background: $background;
+  margin: 0 !important;
+  div {
+    top: 90%;
+    z-index: 8;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .fs-6 {
+    font-size: 12px !important;
+  }
+}

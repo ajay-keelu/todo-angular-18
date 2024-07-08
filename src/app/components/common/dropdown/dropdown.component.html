@@ -1,0 +1,18 @@
+<div class="container-fluid mt-2 rounded position-relative d-flex align-items-center justify-content-between w-100 d-md-none d-lg-none"
+    tabindex="1" role="button" (click)="showDropdown(!dropdown)" (blur)="showDropdown(false)">
+    @for (route of routes; track $index) {
+    <span class="fw-medium px-1 py-2 py-sm-1 fs-6" [title]="route.value" *ngIf="route.link == curRoute">
+        {{route.value}}</span>
+    }
+    <button class="border-0 bg-transparent">
+        <img src="assets/fa/arrow-down.svg" alt="arrow-down">
+    </button>
+    <div class="position-absolute bg-white d-flex flex-column shadow-sm w-100 start-0 px-3 py-2 rounded-bottom-2"
+        *ngIf="dropdown">
+        @for (route of routes; track $index) {
+        <a class="w-100 text-decoration-none text-dark fw-medium fs-6" *ngIf="route.link != curRoute"
+            [routerLink]="'/'+route.link">
+            {{route.value}}</a>
+        }
+    </div>
+</div>

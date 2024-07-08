@@ -1,0 +1,33 @@
+<div *ngFor="let item of tasks" (click)="showDetails ?  openDetailsDiv(division): ''" #division
+    [ngStyle]="{'cursor':showDetails?'pointer':'auto'} "
+    [class]="'d-flex align-items-center shadow-sm px-2 px-md-3 py-md-2 mt-3 rounded-3 gap-2 w-100 '+Title.toLowerCase()+'-component position-relative'">
+    <div *ngIf="showDetails" class="position-absolute card z-1 border-0 shadow-sm px-3 py-1  top-100 end-0 mt-2">
+        <button (click)="closeDetailsDiv(division);onEvent($event)" title="close"
+            class="m-2 py-0 px-2 fw-bolder fs-4 position-absolute shadow-sm top-0 end-0 border-0 bg-transparent btn cross">
+            &times;
+        </button>
+        <div class="border-0">
+            <div class="card-title fw-bold text-capitalize mb-0 text-wrap">{{item.title}}</div>
+            <div class="time fw-medium mb-1">
+                Added {{getTimeDiff(item.createdOn)}}
+            </div>
+            <div class="card-title fw-bold">Description</div>
+            <div class="fs-6 description text-wrap">{{item.description}}</div>
+            <div class="d-flex justify-content-between mt-2 manipulate align-items-center">
+                <div class="" (click)="updateStatus(item.id)" title="checkbox">
+                    <img [src]="Title == 'Active' ? active : completed" alt="checkbox">
+                </div>
+                <div class="d-flex gap-1">
+                    <button *ngIf="Title == 'Active'" title="edit" (click)="edit(item)" class="border-0 btn">
+                        <img src="assets/fa/edit.svg" alt="edit">
+                    </button>
+                    <button (click)="delete(item.id)" title="Delete" class="border-0 bg-transparent">
+                        <img [src]="'assets/fa/delete'+(Title != 'Active' ? '-c' : '')+'.svg'" alt="delete">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="checkbox" [src]="Title == 'Active' ? active : completed" alt="active">
+    <p class="m-1 p-0 fs-6 fw-medium text-wrap">{{item.title}}</p>
+</div>

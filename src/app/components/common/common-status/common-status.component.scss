@@ -1,0 +1,19 @@
+.container-fluid {
+  .time {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .header {
+    h4 {
+      font-size: 12px !important;
+    }
+    .time {
+      font-size: 8px !important;
+    }
+  }
+  .no-tasks{
+    font-size: 12px !important;
+  }
+}

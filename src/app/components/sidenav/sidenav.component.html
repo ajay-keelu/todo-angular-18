@@ -1,0 +1,22 @@
+<div class="w-100 h-100 d-flex flex-column align-items-center">
+    <h1 class="fs-2 fw-bolder my-3" title="To-Do App" routerLink="/dashboard" role="button">{{Title}}</h1>
+
+    <button class="d-flex align-items-center border-0 btn shadow-sm px-3 my-5 gap-4" type="button" title="Add task"
+        (click)="modelOpen()">
+        <span class="fs-5">Add&nbsp;Task</span> <img src="assets/fa/circle-plus.svg" alt="add" />
+    </button>
+
+    <div class="w-100">
+        <div class="list-group w-100 fw-medium text-center">
+            <a></a>
+            <a class="list-group-item border-0 w-100 my-2" title="Dashboard" routerLink="dashboard"
+                routerLinkActive="active">Dashboard
+            </a>
+            <a class="list-group-item border-0 w-100 my-2" title="Active" routerLink="active"
+                routerLinkActive="active">Active</a>
+            <a class="list-group-item border-0 w-100 my-2" title="Completed" routerLink="completed"
+                routerLinkActive="active">Completed</a>
+            <a></a>
+        </div>
+    </div>
+</div>

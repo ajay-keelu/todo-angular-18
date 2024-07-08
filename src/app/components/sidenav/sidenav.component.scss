@@ -1,0 +1,20 @@
+$fontFamily: "Lexend", sans-serif;
+$HeaderColor: #ba5112;
+
+h1 {
+  color: $HeaderColor;
+  font-family: $fontFamily;
+}
+button {
+  font-family: $fontFamily;
+  img {
+    height: 25px;
+  }
+}
+
+.list-group-item {
+  &.active {
+    background: #edb046;
+    color: #000;
+  }
+}

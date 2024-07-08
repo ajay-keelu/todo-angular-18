@@ -1,0 +1,35 @@
+<div *ngIf="Model" class="container-fluid position-fixed top-0 start-0 h-100  z-2">
+    <div class="row h-100 d-flex align-items-center justify-content-center">
+        <div class="col-md-6 col-sm-8">
+            <div class="task-container w-100 p-md-5 p-2 py-3 bg-white rounded-3">
+                <form #ModalForm="ngForm" (ngSubmit)="task.id ? update(ModalForm) :submit(ModalForm)">
+                    <div class="title mb-3">
+                        <input type="text" placeholder="Add title" class="form-control w-100 shadow-sm" name="title"
+                            #title="ngModel" [(ngModel)]="task.title" autofocus required>
+                    </div>
+                    <div class="description mb-3">
+                        <textarea rows="5" class="form-control w-100 shadow-sm" name="description"
+                            placeholder="Add description" #description="ngModel" [(ngModel)]="task.description"
+                            required></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end align-items-center">
+                        <div class="d-flex gap-2">
+                            <div class="cancel">
+                                <button (click)="closeModal(ModalForm)"
+                                    class="btn border-2 p-0 px-2 border-warning fs-6 shadow-sm"
+                                    type="button">Cancel</button>
+                            </div>
+                            <div class="save">
+                                <button [disabled]="ModalForm.invalid" class="btn border-0 p-0 px-2 fs-6 shadow-sm">
+                                    {{task.id ?
+                                    'Update' : 'Save'}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <app-header [Title]="Title" />
+    <app-dropdown />
+
+    <div class="mt-4 d-flex justify-content-between align-items-center header">
+        <h4 class="fs-6 d-flex gap-2">
+            Today's <span class="d-md-block d-lg-block d-none"> {{Title}} </span> Tasks
+        </h4>
+        <span class="time text-dark-emphasis fw-medium"> {{curDate | date: 'EEEE, dd MMMM yyyy' }}</span>
+    </div>
+    <div class="w-100">
+        <div class="text-center no-tasks fw-medium" *ngIf="tasks.length == 0">No {{Title.toLowerCase()}} tasks </div>
+        <app-task-list [Title]="Title" [tasks]="tasks" [showDetails]="true" (upadateTask)="getTasks()"
+            (editTask)="editTask($event)" />
+    </div>
+</div>
+<app-modal [Model]="isModelOpen" (EmitTasks)="getTasks()" [task]="task" (EditTask)="getTasks()" />
